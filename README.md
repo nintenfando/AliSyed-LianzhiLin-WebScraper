@@ -20,8 +20,8 @@ _Feel free to add any checklist items below to best communicate with your group_
 [Instructions for how to use GitHub text formatting] (https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
 _To mark a box as complete enter an X in between the brackets. See the first check for an example_
-- [ ] Created github repository
-- [ ] edited MarkDown file for my group with project name and group members.
+- [ x] Created github repository
+- [ x] edited MarkDown file for my group with project name and group members.
 - [ ] Research and define webscraping and web cracking in md file
 - [ ] Decide Project using research and personal preference. Fill in Description on md file when ready.
 - [ ] Code and Create Project
