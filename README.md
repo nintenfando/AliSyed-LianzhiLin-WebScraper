@@ -1,7 +1,7 @@
 _Keep track of this ReadME file as you go. Delete this line when ready_ 
-# Insert Project Name
+# ∆xM
 ### 2025 CLHS Cybersecurity
-_Insert Student Names_
+By Ali Syed and Lianzhi Lin
 
 ## WebScraping and Web Cracking
 _define web scraping and web cracking here_
