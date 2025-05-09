@@ -1,5 +1,5 @@
 _Keep track of this ReadME file as you go. Delete this line when ready_ 
-# ∆xM
+# Noti
 ### 2025 CLHS Cybersecurity
 By Ali Syed and Lianzhi Lin
 
