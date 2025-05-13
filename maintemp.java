@@ -12,12 +12,15 @@ import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.Message;
+import com.google.api.services.gmail.model.MessagePartHeader;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
@@ -37,7 +40,8 @@ public class Main {
             .setAccessType("offline")
             .build();
 
-        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
+        // Let system choose available port automatically
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().build();
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
     }
 
@@ -48,28 +52,31 @@ public class Main {
                 .setApplicationName("Noti")
                 .build();
 
-            // Modified section: Get latest message TO YOU
+            // Get latest message addressed to you
             ListMessagesResponse response = service.users().messages()
                 .list("me")
-                .setQ("is:inbox")  // Only messages in inbox
-                .setMaxResults(1)  // Get most recent
+                .setQ("is:inbox to:me")
+                .setMaxResults(1)
                 .execute();
 
-            if (response.getMessages() != null && !response.getMessages().isEmpty()) {
-                String messageId = response.getMessages().get(0).getId();
-                Message message = service.users().messages().get("me", messageId).execute();
+            List<Message> messages = response.getMessages();
+            if (!messages.isEmpty()) {  // Removed redundant null check
+                String messageId = messages.get(0).getId();
+                Message message = service.users().messages()
+                    .get("me", messageId)
+                    .setFormat("metadata")  // Optimized data fetch
+                    .execute();
 
-                String subject = message.getPayload().getHeaders().stream()
-                    .filter(h -> h.getName().equalsIgnoreCase("Subject"))
-                    .findFirst()
-                    .map(h -> h.getValue())
-                    .orElse("(No Subject)");
+                // Safely extract headers
+                Message.Payload payload = message.getPayload();
+                if (payload == null) {
+                    System.out.println("Message has no payload");
+                    return;
+                }
 
-                String sender = message.getPayload().getHeaders().stream()
-                    .filter(h -> h.getName().equalsIgnoreCase("From"))
-                    .findFirst()
-                    .map(h -> h.getValue())
-                    .orElse("Unknown Sender");
+                List<MessagePartHeader> headers = payload.getHeaders();
+                String subject = getHeaderValue(headers, "Subject");
+                String sender = getHeaderValue(headers, "From");
 
                 System.out.println("Latest message to you:");
                 System.out.println("Subject: " + subject);
@@ -81,5 +88,14 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    private static String getHeaderValue(List<MessagePartHeader> headers, String name) {
+        return Optional.ofNullable(headers)
+            .flatMap(hList -> hList.stream()
+                .filter(h -> h.getName().equalsIgnoreCase(name))
+                .findFirst()
+                .map(MessagePartHeader::getValue))
+            .orElse(name.equalsIgnoreCase("Subject") ? "(No Subject)" : "Unknown");
     }
 }
