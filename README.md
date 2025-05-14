@@ -4,13 +4,13 @@ _Keep track of this ReadME file as you go. Delete this line when ready_
 By Ali Syed and Lianzhi Lin
 
 ## WebScraping and Web Cracking
-_define web scraping and web cracking here_
+We access the Gmail messages connected to our account and 
 
 ## Description
-_Insert project description Here_
+Looks at the latest message you've recieved on Gmail.
 
 ## Use
-_Insert directions for how to use your project and any command line dependencies and arguments_
+Run it.
 
 ## Sources
 _Insert and sources used for research here_
@@ -24,13 +24,13 @@ _To mark a box as complete enter an X in between the brackets. See the first che
 - [x] edited MarkDown file for my group with project name and group members.
 - [ ] Research and define webscraping and web cracking in md file
 - [ ] Decide Project using research and personal preference. Fill in Description on md file when ready.
-- [ ] Code and Create Project
-- [ ] Presentation
-   - [ ] code snippets
-   - [ ] video of running program
-   - [ ] At least 11 slides **_See Instructions_**
+- [x] Code and Create Project
+- [x] Presentation
+   - [x] code snippets
+   - [x] video of running program
+   - [x] At least 11 slides **_See Instructions_**
 - [ ] Project Write-Up
-- [ ] Works Cited
+- [x] Works Cited
 
 ## Writeup
 _Copy Paste your write up here, just because it makes it look neat_
