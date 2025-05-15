@@ -4,16 +4,20 @@ _Keep track of this ReadME file as you go. Delete this line when ready_
 By Ali Syed and Lianzhi Lin
 
 ## WebScraping and Web Cracking
-We access the Gmail messages connected to our account and 
+Using a program/bots to take data from websites; the data type does not matter - extracting text, images, code, etc. - are all forms of web scraping.
 
 ## Description
 Looks at the latest message you've recieved on Gmail.
 
-## Use
-Run it.
+## Usage
+Run it on Cmd or Visual Studio (recommended).
 
 ## Sources
-_Insert and sources used for research here_
+Google. Gmail API Overview. Google for Developers, https://developers.google.com/workspace/gmail/api/guides. Accessed 13 May 2025.
+ 
+StackOverflow, How do I resolve ClassNotFoundException?, https://stackoverflow.com/questions/17408769/how-do-i-resolve-classnotfoundexception
+ 
+CodeAcademy. How to Send Emails Using Gmail API. YouTube, 31 July 2023, https://youtu.be/xtZI23hxetw?si=cqhZHVF1cUA6u-eR.
 
 ## Requirement Checklist
 _Feel free to add any checklist items below to best communicate with your group_
@@ -22,8 +26,8 @@ _Feel free to add any checklist items below to best communicate with your group_
 _To mark a box as complete enter an X in between the brackets. See the first check for an example_
 - [x] Created github repository
 - [x] edited MarkDown file for my group with project name and group members.
-- [ ] Research and define webscraping and web cracking in md file
-- [ ] Decide Project using research and personal preference. Fill in Description on md file when ready.
+- [x] Research and define webscraping and web cracking in md file
+- [x] Decide Project using research and personal preference. Fill in Description on md file when ready.
 - [x] Code and Create Project
 - [x] Presentation
    - [x] code snippets
