@@ -37,4 +37,4 @@ _To mark a box as complete enter an X in between the brackets. See the first che
 - [x] Works Cited
 
 ## Writeup
-_Copy Paste your write up here, just because it makes it look neat_
+When we began our project, we knew Noti would need access to our Gmail account. The first step towards that was getting the Gmail API. All I needed to do was just go to the Google APIs site and follow along with their steps. I agreed to their terms and such, and eventually got access to my credentials.JSON, which is my API key, something my program will need to get access to my Gmail's inbox. 
