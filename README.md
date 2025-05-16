@@ -1,4 +1,3 @@
-_Keep track of this ReadME file as you go. Delete this line when ready_ 
 # Noti
 ### 2025 CLHS Cybersecurity
 By Ali Syed and Lianzhi Lin
@@ -33,7 +32,7 @@ _To mark a box as complete enter an X in between the brackets. See the first che
    - [x] code snippets
    - [x] video of running program
    - [x] At least 11 slides **_See Instructions_**
-- [ ] Project Write-Up
+- [x] Project Write-Up
 - [x] Works Cited
 
 ## Writeup
