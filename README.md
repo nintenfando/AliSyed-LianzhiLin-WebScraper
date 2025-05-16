@@ -12,11 +12,12 @@ Looks at the latest message you've recieved on Gmail.
 Run it on Cmd or Visual Studio (recommended).
 
 ## Sources
-Google. Gmail API Overview. Google for Developers, https://developers.google.com/workspace/gmail/api/guides. Accessed 13 May 2025.
- 
-StackOverflow, How do I resolve ClassNotFoundException?, https://stackoverflow.com/questions/17408769/how-do-i-resolve-classnotfoundexception
+
+StackOverflow, How do I resolve ClassNotFoundException?, 1 July 2013, https://stackoverflow.com/questions/17408769/how-do-i-resolve-classnotfoundexception
  
 CodeAcademy. How to Send Emails Using Gmail API. YouTube, 31 July 2023, https://youtu.be/xtZI23hxetw?si=cqhZHVF1cUA6u-eR.
+
+Google Workspace, Gmail API Overview, Google, 7 May 2025, https://developers.google.com/workspace/gmail/api/guides
 
 ## Requirement Checklist
 _Feel free to add any checklist items below to best communicate with your group_
